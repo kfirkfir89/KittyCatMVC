@@ -1,0 +1,101 @@
+:root {
+    --primary-color: #233356;
+    --secondary-color: #547FDD; /*#1CA8FC-blue*/
+    --dark-color: #292929;
+    --white-color: white;
+}
+
+.smallfont {
+    font-size: .9rem;
+}
+
+@media only screen and (min-width:340px) {
+    .smallfont {
+        font-size: 1rem;
+    }
+}
+
+
+body {
+    color: var(--dark-color);
+    background-color: var(--white-color);
+}
+
+nav {
+    background-color: var(--primary-color);
+}
+
+
+footer {
+    background-color: var(--primary-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+}
+
+footer {
+    padding-right: 1rem;
+}
+
+    footer .social > a {
+        color: var(--white-color);
+        opacity: 0.75;
+    }
+
+        footer .social > a:hover {
+            opacity: 1;
+            color: var(--secondary-color);
+        }
+
+.bsicon {
+    color: #6f42c1;
+}
+
+.jsicon {
+    color: #f7df1e;
+}
+
+.htmlicon {
+    color: #FFA500;
+}
+
+.cssicon {
+    color: #29a9df;
+}
+
+.checklist > li i {
+    color: var(--secondary-color)
+}
+
+code[class*="language-"], pre[class*="language-"] {
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.vl {
+    border-left: 1px solid white;
+    height: 30px;
+    margin-right: 10px;
+    opacity: 0.4;
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--secondary-color);
+}
+
+
+main > .container {
+    padding: 60px 15px 0;
+    margin-bottom: 5rem;
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Height of the footer */
+    background: white;
+}
