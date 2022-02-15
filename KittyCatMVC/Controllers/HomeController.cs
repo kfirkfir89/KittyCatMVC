@@ -32,7 +32,35 @@ namespace KittyCatMVC.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult KCPage(KittyCat kittycat)
         {
+            List<string> kcItems = new();
 
+            bool kitty;
+            bool cat;
+
+            for (int i = 1; i <= 100; i++)
+            {
+                kitty = (i % kittycat.KittyValue == 0);
+                cat = (i % kittycat.CatValue == 0);
+
+                if (kitty && cat)
+                {
+                    kcItems.Add("KittyCat");
+                }
+                else if (kitty)
+                {
+                    kcItems.Add("Kitty");
+                }
+                else if (cat)
+                {
+                    kcItems.Add("Cat");
+                }
+                else
+                {
+                    kcItems.Add(i.ToString());
+                }
+            }
+
+            kittycat.Result = kcItems;
 
             return View(kittycat);
         }
